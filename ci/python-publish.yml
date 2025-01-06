@@ -16,7 +16,7 @@ permissions:
   contents: read
 
 jobs:
-  release-build:
+  release-build: enable
     runs-on: ubuntu-latest
 
     steps:
