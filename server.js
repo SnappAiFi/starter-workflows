@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
         // Handle autocomplete requests
         const query = new URLSearchParams(req.url.split('?')[1]).get('query');
         const suggestions = ['apple', 'banana', 'cherry']; // Example suggestions
-        const filteredSuggestions = suggestions.filter(s => s.startsWith(query));
+        const filteredSuggestions = query ? suggestions.filter(s => s.startsWith(query)) : [];
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(filteredSuggestions));
         return;
