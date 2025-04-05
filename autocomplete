@@ -1,0 +1,10 @@
+/*************  ✨ Windsurf Command ⭐  *************/
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+    if (query) {
+        document.getElementById('autocomplete-input').value = query;
+    document.getElementById('autocomplete-input').dispatchEvent(new Event('input'));
+        }
+</script>
+/*******  6d3c1057-7484-445d-bc52-11744b04dce0  *******/
